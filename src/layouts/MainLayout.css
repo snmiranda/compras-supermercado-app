@@ -1,0 +1,95 @@
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-md);
+    padding-bottom: 80px;
+    /* Space for bottom nav */
+}
+
+/* Header for Theme Toggle */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.top-bar h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--color-primary-hover);
+}
+
+.theme-toggle {
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.theme-toggle:hover {
+    background-color: var(--color-surface-hover);
+    color: var(--color-text-main);
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-divider);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    height: 70px;
+    /* Taller for mobile touch targets */
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    flex: 1;
+    transition: color 0.2s ease;
+    gap: 4px;
+}
+
+.nav-item svg {
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-item.active {
+    color: var(--color-primary-hover);
+    font-weight: 500;
+}
+
+.nav-item.active svg {
+    transform: scale(1.1);
+    stroke-width: 2.5px;
+}
+
+/* Add ripple effect or active state styles if desired */

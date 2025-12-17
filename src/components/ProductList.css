@@ -1,0 +1,171 @@
+/* Product List Container */
+.product-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    height: 100%;
+    position: relative;
+    /* Needed for absolute positioning context if we wanted it relative to container, but FAB is usually fixed */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    align-items: center;
+    background-color: var(--color-surface);
+}
+
+.search-input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-secondary);
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding-left: 40px;
+    background-color: var(--color-bg);
+    border: none;
+    height: 48px;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+}
+
+/* FAB Add Button removed - now in global index.css */
+
+/* Supermarket Grid Layout */
+.product-list {
+    display: grid;
+    gap: var(--spacing-sm);
+    padding-bottom: 96px;
+    /* Increased space for FAB */
+    overflow-y: auto;
+    /* Enable scrolling within list if container is fixed height */
+}
+
+/* New Product Item Card */
+.product-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.1s;
+}
+
+.product-item:active {
+    transform: scale(0.99);
+}
+
+/* Left: Sticker Image */
+.product-thumbnail {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    /* Default bg, overridden by inline styles for categories */
+    background-color: var(--color-bg);
+}
+
+.product-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Center: Info */
+.product-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.product-name-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.2;
+}
+
+.product-details {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.category-badge {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    width: fit-content;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Right: Price */
+.product-price-block {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.btn-icon-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    border: none;
+    cursor: pointer;
+}
+
+.loading-text,
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-text-secondary);
+}
