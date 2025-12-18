@@ -5,6 +5,115 @@
     padding-bottom: var(--spacing-xl);
 }
 
+.history-controls {
+    padding: var(--spacing-md);
+}
+
+.controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.month-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.month-selector label {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.select-wrapper select {
+    appearance: none;
+    background: var(--color-surface-hover);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: var(--color-text-main);
+    cursor: pointer;
+    min-width: 160px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.select-wrapper select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.select-icon {
+    position: absolute;
+    right: 0.75rem;
+    pointer-events: none;
+    color: var(--color-text-muted);
+}
+
+.btn-clear-filter {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-clear-filter:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text-main);
+}
+
+.btn-export {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.btn-export:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+.btn-export:disabled {
+    background: var(--color-surface-hover);
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.filter-info {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
 .history-list {
     display: grid;
     grid-template-columns: 1fr;

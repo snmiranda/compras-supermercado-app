@@ -1,38 +1,95 @@
-# Gestión de Compras PWA (React + Vite + Dexie)
+# 🛒 Gestión de Compras PWA  
+Aplicación diseñada para registrar compras y analizar gastos en supermercado  
+Pensada principalmente para uso en celulares 📱  
 
-Esta es una **Aplicación Web Progresiva (PWA)** personal para gestionar compras de supermercado, realizar seguimiento de gastos y analizar el consumo por local y producto.
+**Gestión de Compras PWA** es una aplicación web progresiva que permite organizar compras, controlar gastos, visualizar estadísticas y administrar productos sin necesidad de usar Excel.  
 
-Está construida con tecnologías modernas, priorizando la velocidad, el uso offline y un diseño "Mobile-First" moderno y limpio.
+El proyecto fue diseñado con un enfoque **Mobile-First**, permitiendo instalarse como una aplicación en el teléfono y funcionar sin conexión a Internet gracias a IndexedDB.
 
-## Tecnologías
+---
 
-- **React 19**: Biblioteca de UI.
-- **Vite**: Build tool rápido.
-- **Dexie.js (IndexedDB)**: Base de datos local para persistencia offline.
-- **Recharts**: Gráficos de consumo.
-- **Lucide React**: Iconos.
-- **CSS Variables / Theme Context**: Soporte nativo para Modo Oscuro y diseño responsivo "Nano Banana".
+## 🚀 Tecnologías utilizadas
 
-## Características
+- **React 19** – Framework de UI moderno
+- **Vite** – Build tool rápido
+- **Dexie.js (IndexedDB)** – Base de datos local offline
+- **Recharts** – Dashboard de consumo
+- **Lucide React** – Iconografía moderna
+- **Context + CSS Variables** – Diseño responsivo y modo oscuro
+- **ExcelJS** – Exportación de compras mensuales a Excel
 
-- 📦 **Gestión de Productos**: Alta, baja y modificación de productos con soporte para imágenes.
-- 🛒 **Registro de Compras**: Creación de tickets de compra seleccionando productos.
-- 📊 **Dashboard**: Resumen de gastos mensuales, por supermercado y productos favoritos.
-- 🌗 **Modo Oscuro**: Tema visual adaptable (Dark Mode).
-- 📱 **PWA**: Instalable en dispositivos móviles, funciona sin conexión.
-- 🗑️ **Historial**: Visualización y gestión (eliminación) de compras pasadas.
+---
 
-## Cómo ejecutar en local
+## 📌 Funcionalidades
 
-1.  **Instalar dependencias**:
-    ```bash
-    npm install
-    ```
+### 🛒 Registro de compras
+- Crear tickets guardando fecha, productos, cantidades y precios  
+- Cálculo automático de totales  
 
-2.  **Correr servidor de desarrollo**:
-    ```bash
-    npm run dev
-    ```
-    Abre `http://localhost:5173` en tu navegador.
+### 📦 Gestión de productos
+- Alta, baja y edición de productos
+- Precios y categorías
+- Imágenes opcionales
 
-Listo para usar desde cualquier navegador.
+### 📊 Análisis visual (Dashboard)
+- Gastos por mes
+- Consumo por supermercado
+- Productos más comprados
+
+### 📱 PWA – Uso como app móvil
+- Instalable en teléfono Android o iOS
+- Acceso desde el escritorio del móvil
+- Carga extremadamente rápida
+- Funciona sin conexión
+
+### 🗂️ Historial + exportación a Excel
+- Consulta de compras anteriores
+- Filtros por mes
+- Exportación del mes a archivo Excel
+
+---
+
+## 📱 Instalación en celulares (recomendado)
+
+La aplicación está pensada principalmente para usarse desde el celular.
+
+### En Android (Chrome)
+1. Abrí el enlace web
+2. Tocá los tres puntos del navegador
+3. Elegí **“Instalar app”**
+4. Confirmá  
+👉 La app aparecerá en tu menú como si fuera nativa
+
+### En iPhone (Safari)
+1. Abrí el enlace web en Safari
+2. Tocá **Compartir → Agregar al Inicio**
+3. Confirmá la instalación
+
+Luego podrás usarla:
+- sin Internet,
+- a pantalla completa,
+- más rápido que desde navegador.
+
+---
+
+## 🧾 Objetivo del proyecto
+Crear una herramienta simple para:
+- seguir gastos del hogar,
+- reemplazar planillas de Excel tradicionales,
+- registrar compras reales,
+- almacenar datos sin servidores,
+- y visualizar estadísticas útiles.
+
+Ideal para:
+- familias,
+- personas que compran semanalmente,
+- pequeños comercios,
+- control financiero personal.
+
+---
+
+## 🛠️ Cómo ejecutar en local
+
+```bash
+npm install
+npm run dev
