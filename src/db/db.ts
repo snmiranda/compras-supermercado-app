@@ -6,7 +6,6 @@ export interface Product {
     brand?: string;
     content?: string;
     category?: string;
-    description?: string;
     basePrice: number;
     image?: string; // Base64 string
 }

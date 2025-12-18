@@ -28,18 +28,20 @@ export const Products: React.FC = () => {
     };
 
     return (
-        <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ height: '100%', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
             {view === 'list' ? (
                 <>
                     <h1 style={{ marginBottom: '1rem' }}>Mis Productos</h1>
                     <ProductList onAdd={handleAdd} onEdit={handleEdit} />
                 </>
             ) : (
-                <ProductForm
-                    product={editingProduct}
-                    onSave={handleSave}
-                    onCancel={handleCancel}
-                />
+                <div style={{ flex: 1, overflowY: 'auto', paddingBottom: '120px' }}>
+                    <ProductForm
+                        product={editingProduct}
+                        onSave={handleSave}
+                        onCancel={handleCancel}
+                    />
+                </div>
             )}
         </div>
     );

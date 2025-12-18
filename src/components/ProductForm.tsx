@@ -14,7 +14,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ product, onSave, onCan
     const [brand, setBrand] = useState(product?.brand || '');
     const [content, setContent] = useState(product?.content || '');
     const [basePrice, setBasePrice] = useState(product?.basePrice.toString() || '');
-    const [description, setDescription] = useState(product?.description || '');
+
     const [image, setImage] = useState<string | undefined>(product?.image);
     const [error, setError] = useState('');
     const fileInputRef = useRef<HTMLInputElement>(null);
@@ -71,7 +71,6 @@ export const ProductForm: React.FC<ProductFormProps> = ({ product, onSave, onCan
                     brand,
                     content,
                     basePrice: price,
-                    description,
                     image
                 });
             } else {
@@ -81,7 +80,6 @@ export const ProductForm: React.FC<ProductFormProps> = ({ product, onSave, onCan
                     brand,
                     content,
                     basePrice: price,
-                    description,
                     image
                 });
             }
@@ -175,15 +173,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ product, onSave, onCan
                 />
             </div>
 
-            <div className="form-group">
-                <label>Descripción (Opcional)</label>
-                <textarea
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    placeholder="Marca, peso, detalles..."
-                    rows={3}
-                />
-            </div>
+
 
             <div className="form-actions">
                 <button type="button" className="btn-secondary" onClick={onCancel}>
